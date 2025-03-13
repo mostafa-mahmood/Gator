@@ -1,0 +1,25 @@
+{
+  "name": "rss-aggregator",
+  "version": "1.0.0",
+  "description": "A tool that collects and organizes articles from user-provided RSS feeds.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostafa-mahmood/RSS-Aggregator.git"
+  },
+  "author": "mostafa-mahmood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mostafa-mahmood/RSS-Aggregator/issues"
+  },
+  "homepage": "https://github.com/mostafa-mahmood/RSS-Aggregator#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  }
+}
