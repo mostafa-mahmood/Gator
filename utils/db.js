@@ -1,14 +1,12 @@
-require("dotenv").config();
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 async function connectDB() {
           try {
-                    await mongoose.connect(process.env.MONGO_URI);
-                    console.log("connected to db successfully");
-          } catch(err) {
-                    console.error(`error connecting to db ${err}`);
+                    await mongoose.connect("mongodb://localhost:27017/gator");
+          } catch (err) {
+                    console.error(`Error connecting to DB: ${err}`);
                     process.exit(1);
           }
 }
 
-module.exports = {connectDB}
+export default connectDB;

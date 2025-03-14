@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const articleSchema = new mongoose.Schema({
     feed_id: { type: mongoose.Schema.Types.ObjectId, ref: "Feed", required: true, index: true },
@@ -11,4 +11,5 @@ const articleSchema = new mongoose.Schema({
 });
 
 const Article = mongoose.model("Article", articleSchema);
-module.exports = Article;
+
+export default Article;

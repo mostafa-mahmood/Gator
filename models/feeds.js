@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const feedSchema = new mongoose.Schema({
     feed_url: { type: String, required: true, unique: true },
@@ -9,4 +9,5 @@ const feedSchema = new mongoose.Schema({
 });
 
 const Feed = mongoose.model("Feed", feedSchema);
-module.exports = Feed;
+
+export default Feed;
