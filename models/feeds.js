@@ -5,7 +5,6 @@ const feedSchema = new mongoose.Schema({
     title: { type: String, default: "Unknown" },
     description: { type: String, default: "Unknown" },
     language: { type: String, default: "Unknown" },
-    article_count: { type: Number, default: -1 }
 });
 
 const Feed = mongoose.model("Feed", feedSchema);

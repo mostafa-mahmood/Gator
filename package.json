@@ -1,15 +1,15 @@
 {
-  "name": "rss-aggregator",
+  "name": "gator",
   "version": "1.0.0",
-  "description": "A tool that collects and organizes articles from user-provided RSS feeds.",
-  "main": "./cmd/main.js",
+  "description": "An RSS aggregator CLI application that collects and organizes articles from multiple user-provided RSS feeds.",
+  "main": "cmd/main.js",
   "type": "module",
   "scripts": {
-    "start": "node ./cmd/main.js"
+    "start": "node cmd/main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mostafa-mahmood/RSS-Aggregator.git"
+    "url": "git+https://github.com/mostafa-mahmood/Gator.git"
   },
   "bin": {
     "gator": "./cmd/main.js"
@@ -23,9 +23,9 @@
   "dependencies": {
     "boxen": "^8.0.1",
     "chalk": "^5.4.1",
-    "dotenv": "^16.4.7",
     "fast-xml-parser": "^5.0.8",
     "inquirer": "^12.4.3",
-    "mongoose": "^8.12.1"
+    "mongoose": "^8.12.1",
+    "ora": "^8.2.0"
   }
 }

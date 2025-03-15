@@ -13,7 +13,7 @@ export async function validateUrl(url){
                     // validates that url provides xml
                     const xmlValid = XMLValidator.validate(xmlText);
 
-                    if(xmlValid.err) {
+                    if(xmlValid.err) { // the problem is here
                               return false;
                     };
 

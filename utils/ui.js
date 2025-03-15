@@ -4,6 +4,7 @@ import boxen from 'boxen';
 import { initialChoices } from '../cmd/main.js';
 import { exit } from '../cmd/exit.js';
 
+
 /**
  * Clear the terminal screen and display the app header
  */

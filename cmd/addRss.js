@@ -6,8 +6,8 @@ import { showNavigationOptions, clearScreen } from '../utils/ui.js';
 
 
 export async function addRss() {
-        while (true) {
-            try {
+    while (true) {
+        try {
                 const answer = await inquirer.prompt([
                     {
                         type: 'input',
@@ -17,27 +17,27 @@ export async function addRss() {
                 ]);
 
                 if (answer.url.length === 0) {
-                    throw new Error('INVALID URL');
+                    throw new Error('Invalid URL');
                 }
 
                 const valid = await validateUrl(answer.url);
                 if (!valid) {
-                    throw new Error('INVALID RSS FEED');
+                    throw new Error('Invalid XML or RSS Feed');
                 }
 
                 await storeFeed(answer.url);
 
-            } catch (err) {
-                console.log(chalk.bold.red(err.message));
-            }
+                } catch (err) {
+                    console.log(chalk.bold.red(err.message));
+                }
 
-            const choice = await showNavigationOptions(['Add Another Feed']);
-        
-            if (choice === 'Add Another Feed') {
-                clearScreen();
-                continue;
-            }
+                const choice = await showNavigationOptions(['Add Another Feed']);
             
-            return;
+                if (choice === 'Add Another Feed') {
+                    clearScreen();
+                    continue;
+                }
+                
+                return;
     }
 }

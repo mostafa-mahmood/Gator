@@ -46,7 +46,7 @@ export function initialChoices() {
                     }
           ])
           .then((answer) => {
-                    // Extract the choice from the answer object
+                    
                     const { choice } = answer;
                               
                     switch (choice) {
