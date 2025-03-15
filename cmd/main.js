@@ -12,7 +12,7 @@ import {removeRss} from './removeRss.js';
 import {viewArticles} from './viewArticles.js';
 import {fetchArticles} from './fetchArticles.js';
 import {exit} from './exit.js';
-import connectDB from './../utils/db.js'
+import {connectDB} from './../utils/db.js'
 
 await connectDB();
 
@@ -33,7 +33,7 @@ export function initialChoices() {
                     {
                               type: 'list',
                               name: 'choice',
-                              message: chalk.bold("What would you like to do"),
+                              message: chalk.hex('#25b89b').bold("What would you like to do"),
                               choices: [
                                         { name: chalk.bold(CHOICES.VIEW_RSS), value: CHOICES.VIEW_RSS },
                                         { name: chalk.bold(CHOICES.ADD_RSS), value: CHOICES.ADD_RSS },

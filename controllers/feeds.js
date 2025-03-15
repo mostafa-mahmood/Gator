@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import Feed from './../models/feeds.js';
 import {parseXml} from './../utils/xml.js'
 import {getXML} from './client.js';
@@ -40,8 +41,8 @@ export async function storeFeed(url) {
                     const parsedJson = await parseXmlFeed(url);
                     const document = new Feed(parsedJson);
                     await document.save();
-                    console.log(`Feed Saved To DB: ${parsedJson.feed_url}`);
+                    console.log(chalk.green.bold(`Feed Saved To DB: ${parsedJson.feed_url}`));
           } catch(err) {
-                    console.log(`Error storing feed: ${err}`);
+                    console.log(chalk.red.bold(`${err}`));
           }
 }

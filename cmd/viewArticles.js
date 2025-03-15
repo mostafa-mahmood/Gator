@@ -1,5 +1,3 @@
+export async function viewArticles() {
 
-
-export function viewArticles(){
-          console.log('artivle viewed');
 }

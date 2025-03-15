@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-async function connectDB() {
+export async function connectDB() {
           try {
                     await mongoose.connect("mongodb://localhost:27017/gator");
           } catch (err) {
@@ -9,4 +9,11 @@ async function connectDB() {
           }
 }
 
-export default connectDB;
+export async function disconnectDB() {
+          try {
+              await mongoose.disconnect();
+              console.log('MongoDB connection closed');
+          } catch (err) {
+              console.error(`Error disconnecting from DB: ${err}`);
+          }
+}
