@@ -1,6 +1,6 @@
 # Gator 🐊
 
-Gator is a command-line RSS aggregator that lets you collect, organize, and view articles from multiple RSS feeds. Built with Node.js & MongoDB, it stores feed data in MongoDB and offers an interactive CLI experience. Whether you're a news junkie or just want to streamline your reading, Gator’s got you covered.
+Gator is a command-line RSS aggregator that lets you collect, organize, and view articles from multiple RSS feeds. Built with Node.js , it stores feed data in MongoDB and offers an interactive CLI experience. Whether you're a news junkie or just want to streamline your reading, Gator’s got you covered.
 
 ![Gator Preview](./preview/vid.gif)
 
