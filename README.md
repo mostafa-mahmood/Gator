@@ -6,9 +6,9 @@ Gator is a command-line RSS aggregator that lets you collect, organize, and view
 
 ## Features
 - **Manage RSS Feeds**: Input URLs to track your favorite sources.
+- **Cron Job**: Automaticly fetches latest articles every 60 minutes.
 - **Organize Articles**: Stores feed metadata (title, description, language) in MongoDB.
 - **Interactive CLI**: Navigate options with a clean, styled interface.
-- **Lightweight**: Simple setup, runs anywhere with Node.js.
 
 ## Prerequisites
 Before installing Gator, ensure you have:
@@ -49,6 +49,7 @@ gator
 - **Fetch Articles**: Retrieve and store the latest articles.
 - **View Articles**: Display saved articles.
 - **Remove a Feed**: Delete an RSS source from storage.
+- **Enable Cron Job**: Fetches articles automaticly every 60 minutes.
 - **Exit**: Close the CLI.
 
 
