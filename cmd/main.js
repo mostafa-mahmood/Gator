@@ -11,6 +11,7 @@ import {addRss} from './addRss.js';
 import {removeRss} from './removeRss.js';
 import {viewArticles} from './viewArticles.js';
 import {fetchArticles} from './fetchArticles.js';
+import { handleCronJob } from "./cronJob.js";
 import {exit} from './exit.js';
 import {connectDB} from './../utils/db.js'
 
@@ -25,6 +26,7 @@ export function initialChoices() {
                     REMOVE_RSS: 'Remove an RSS Feed',
                     VIEW_ARTICLES: 'View All Articles',
                     FETCH_ARTICLES: 'Fetch Latest Articles',
+                    CRON_JOB: 'Enable Cron Job', 
                     EXIT: 'Exit'
           };
                   
@@ -40,6 +42,7 @@ export function initialChoices() {
                                         { name: chalk.bold(CHOICES.REMOVE_RSS), value: CHOICES.REMOVE_RSS },
                                         { name: chalk.bold(CHOICES.VIEW_ARTICLES), value: CHOICES.VIEW_ARTICLES },
                                         { name: chalk.bold(CHOICES.FETCH_ARTICLES), value: CHOICES.FETCH_ARTICLES },
+                                        { name: chalk.bold(CHOICES.CRON_JOB), value: CHOICES.CRON_JOB},
                                         { name: chalk.bold(CHOICES.EXIT), value: CHOICES.EXIT }
                               ],
                               default: CHOICES.VIEW_ARTICLES
@@ -65,6 +68,9 @@ export function initialChoices() {
                               case CHOICES.FETCH_ARTICLES:
                               fetchArticles();
                               break;
+                              case CHOICES.CRON_JOB:
+                              handleCronJob();
+                              break;
                               case CHOICES.EXIT:
                               exit();
                               default:
@@ -72,7 +78,7 @@ export function initialChoices() {
                     }
           })
           .catch((err) => {
-                    console.error(chalk.red('Error occurred'));
+                    console.error(chalk.red(`Error occurred: ${err}`));
           })
 }
 
